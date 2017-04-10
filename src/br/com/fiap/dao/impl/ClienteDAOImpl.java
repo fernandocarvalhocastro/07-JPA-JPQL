@@ -54,6 +54,11 @@ public class ClienteDAOImpl extends GenericDAOImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
+	@Override
+	public long quantidadeClientes() {
+		return em.createQuery("select count(c) from Cliente c",Long.class).getSingleResult();
+	}
+
 }
 
 
