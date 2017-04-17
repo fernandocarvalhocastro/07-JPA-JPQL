@@ -10,13 +10,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+<<<<<<< HEAD
 import javax.persistence.NamedQueries;
+=======
+>>>>>>> 0084c84d99b1790e70134fa5404daf8c3f3d612a
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+<<<<<<< HEAD
 @NamedQueries({ 
 	@NamedQuery(name="Cliente.porCpf", 
 				query="from Cliente c where c.cpf = :cpf"),
@@ -25,6 +29,10 @@ import javax.persistence.TemporalType;
 				query="from Cliente c where month(c.dataNascimento) = :mes")
 })
 
+=======
+@NamedQuery(name="Cliente.porCpf", 
+			query="from Cliente c where c.cpf = :cpf")
+>>>>>>> 0084c84d99b1790e70134fa5404daf8c3f3d612a
 @Entity
 @SequenceGenerator(name="seqCliente", sequenceName="SEQ_CLIENTE", allocationSize=1)
 public class Cliente {

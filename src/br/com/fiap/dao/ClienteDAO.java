@@ -17,7 +17,10 @@ public interface ClienteDAO extends GenericDAO<Cliente,Integer>{
 	
 	Cliente buscarPorCpf(String cpf);
 	
+<<<<<<< HEAD
 	List<Cliente> buscarPorMesNascimento(Calendar dataNascimento);
 	
+=======
+>>>>>>> 0084c84d99b1790e70134fa5404daf8c3f3d612a
 	long quantidadeClientes();
 }
