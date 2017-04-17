@@ -1,6 +1,8 @@
 package br.com.fiap.dao;
 
+import java.util.Calendar;
 import java.util.List;
+
 import br.com.fiap.entity.Cliente;
 
 public interface ClienteDAO extends GenericDAO<Cliente,Integer>{
@@ -14,6 +16,8 @@ public interface ClienteDAO extends GenericDAO<Cliente,Integer>{
 	List<Cliente> buscarPorEstados(List<String> estados);
 	
 	Cliente buscarPorCpf(String cpf);
+	
+	List<Cliente> buscarPorMesNascimento(Calendar dataNascimento);
 	
 	long quantidadeClientes();
 }

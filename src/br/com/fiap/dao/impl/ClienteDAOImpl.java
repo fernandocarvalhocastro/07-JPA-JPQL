@@ -1,5 +1,6 @@
 package br.com.fiap.dao.impl;
 
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -64,6 +65,13 @@ public class ClienteDAOImpl extends GenericDAOImpl<Cliente,Integer> implements C
 		return em.createNamedQuery("Cliente.porCpf", Cliente.class)
 								.setParameter("cpf", cpf)
 								.getSingleResult();
+	}
+
+	@Override
+	public List<Cliente> buscarPorMesNascimento(Calendar dataNascimento) {
+		return em.createNamedQuery("Cliente.porMesNascimento", Cliente.class)
+				.setParameter("mes", dataNascimento.get(Calendar.MONTH))
+				.getResultList();
 	}
 
 }

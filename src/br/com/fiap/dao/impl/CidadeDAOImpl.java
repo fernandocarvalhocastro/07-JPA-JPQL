@@ -1,5 +1,7 @@
 package br.com.fiap.dao.impl;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import br.com.fiap.dao.CidadeDAO;
@@ -9,6 +11,14 @@ public class CidadeDAOImpl extends GenericDAOImpl<Cidade,Integer> implements Cid
 
 	public CidadeDAOImpl(EntityManager entityManager) {
 		super(entityManager);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Cidade> buscarPorCidade(String uf) {
+		return em.createNativeQuery("select * from cidade where uf =:e", Cidade.class)
+						.setParameter("e", uf)
+						.getResultList();
 	}
 
 }
