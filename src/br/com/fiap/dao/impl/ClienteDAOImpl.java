@@ -67,7 +67,6 @@ public class ClienteDAOImpl extends GenericDAOImpl<Cliente,Integer> implements C
 								.getSingleResult();
 	}
 
-<<<<<<< HEAD
 	@Override
 	public List<Cliente> buscarPorMesNascimento(Calendar dataNascimento) {
 		return em.createNamedQuery("Cliente.porMesNascimento", Cliente.class)
@@ -75,8 +74,6 @@ public class ClienteDAOImpl extends GenericDAOImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
-=======
->>>>>>> 0084c84d99b1790e70134fa5404daf8c3f3d612a
 }
 
 
